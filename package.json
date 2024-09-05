@@ -1,0 +1,15 @@
+{
+  "name": "GI Live Hotfix Downloader",
+  "version": "1.0.0",
+  "description": "A project to manage and verify Live Hotfix data patches that are downloaded when you log in to the game.",
+  "main": "loader.js",
+  "scripts": {
+    "start": "node loader.js"
+  },
+  "author": "Roslyn",
+  "license": "MIT",
+  "dependencies": {
+    "fs-extra": "^10.0.0",
+    "path": "^0.12.7"
+  }
+}
