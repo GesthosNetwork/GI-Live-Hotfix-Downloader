@@ -16,6 +16,12 @@ const list =
 			clientSilence: {Version: 26594938, Suffix: "e3714681f7"},
 			client: {Version: 26594938, Suffix: "e3714681f7"},
 		},
+		
+		{
+			res: {Version: 26709834, Suffix: "034791c61b"},
+			clientSilence: {Version: 26720294, Suffix: "79e8f3e212"},
+			client: {Version: 26720294, Suffix: "79e8f3e212"},
+		},
 	],
 }
 
