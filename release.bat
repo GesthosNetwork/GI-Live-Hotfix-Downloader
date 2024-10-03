@@ -1,9 +1,12 @@
 @echo off
 setlocal enabledelayedexpansion
-set BRANCH_VERSION=%BRANCH:~0,3%
 
 for /f "tokens=1,2 delims==" %%A in (.env) do (
     set "%%A=%%B"
+)
+
+for /f "tokens=1 delims=_" %%A in ("%BRANCH%") do (
+    set BRANCH_VERSION=%%A.0
 )
 
 for /f "tokens=1,2 delims= " %%A in (version.release\%BRANCH%.txt) do (
@@ -13,7 +16,7 @@ for /f "tokens=1,2 delims= " %%A in (version.release\%BRANCH%.txt) do (
     )
 )
 
-set TARGET_DIR=.\resources\OSRELWin%BRANCH_VERSION%.0_R%res_CODE%_S%silence_CODE%_D%data_CODE%\GenshinImpact_Data\Persistent
+set TARGET_DIR=.\resources\OSRELWin%BRANCH_VERSION%_R%res_CODE%_S%silence_CODE%_D%data_CODE%\GenshinImpact_Data\Persistent
 if not exist "%TARGET_DIR%" (
     mkdir "%TARGET_DIR%"
 )
@@ -28,7 +31,7 @@ if exist "%path1%\res_versions_external" (
 )
 
 if exist "%path2%\data_versions" (
-    ren "%patc2%\data_versions" "silence_data_versions_persist"
+    ren "%path2%\data_versions" "silence_data_versions_persist"
     move "%path2%\silence_data_versions_persist" "%TARGET_DIR%\silence_data_versions_persist"
 )
 
@@ -45,8 +48,7 @@ for %%D in (
 ) do (
     if "%%~nxD"=="AudioAssets" (
         dir /b "%%D" | findstr /v /i "audio_versions" >nul
-        if errorlevel 1 (
-        ) else (
+        if not errorlevel 1 (
             robocopy "%%D" "%TARGET_DIR%\AudioAssets" /e /move /xf audio_versions
         )
     ) else (
@@ -58,7 +60,12 @@ echo %res_CODE% > "%TARGET_DIR%\res_revision"
 echo %silence_CODE% > "%TARGET_DIR%\silence_revision"
 echo %data_CODE% > "%TARGET_DIR%\data_revision"
 
-for %%F in ("%TARGET_DIR%\AssetBundles\svc_catalog") do if exist "%%F" del "%%F"
+for %%F in ("%TARGET_DIR%\AssetBundles\svc_catalog" resources\client_design_data resources\client_game_res) do (
+    if exist "%%F" (
+        del /q "%%F" 2>nul
+        rmdir /s /q "%%F" 2>nul
+    )
+)
 
 echo Process completed.
 pause
