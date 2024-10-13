@@ -40,9 +40,15 @@ if exist "%path3%\data_versions" (
     move "%path3%\data_versions_persist" "%TARGET_DIR%\data_versions_persist"
 )
 
+if exist "%path3%\data_versions_medium" (
+    ren "%path3%\data_versions_medium" "data_versions_medium_persist"
+    move "%path3%\data_versions_medium_persist" "%TARGET_DIR%\data_versions_medium_persist"
+)
+
 for %%D in (
     "%path1%\AssetBundles"
     "%path1%\AudioAssets"
+    "%path1%\VideoAssets"
     "%path2%"
     "%path3%"
 ) do (
@@ -50,6 +56,11 @@ for %%D in (
         dir /b "%%D" | findstr /v /i "audio_versions" >nul
         if not errorlevel 1 (
             robocopy "%%D" "%TARGET_DIR%\AudioAssets" /e /move /xf audio_versions
+        )
+    ) else if "%%~nxD"=="VideoAssets" (
+        dir /b "%%D" | findstr /v /i "video_versions" >nul
+        if not errorlevel 1 (
+            robocopy "%%D" ".\resources\OSRELWin%BRANCH_VERSION%_R%res_CODE%_S%silence_CODE%_D%data_CODE%\GenshinImpact_Data\StreamingAssets\VideoAssets" /e /move /xf video_versions
         )
     ) else (
         robocopy "%%D" "%TARGET_DIR%\AssetBundles" /e /move

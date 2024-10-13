@@ -43,6 +43,7 @@ SILENCE_FILES = [
 
 DATA_BASE_PATH = "client_design_data"
 DATA_FILES = [
+  "AssetBundles/data_versions_medium",
   "AssetBundles/data_versions"
 ]
 
