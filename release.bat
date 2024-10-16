@@ -25,8 +25,8 @@ set path1=.\resources\client_game_res\%BRANCH%\output_%res_CODE%_%res_SUFFIX%\cl
 set path2=.\resources\client_design_data\%BRANCH%\output_%silence_CODE%_%silence_SUFFIX%\client_silence\General\AssetBundles
 set path3=.\resources\client_design_data\%BRANCH%\output_%data_CODE%_%data_SUFFIX%\client\General\AssetBundles
 
-if exist "%path1%\res_versions_external" (
-    ren "%path1%\res_versions_external" "res_versions_persist"
+if exist "%path1%\release_res_versions_external" (
+    ren "%path1%\release_res_versions_external" "res_versions_persist"
     move "%path1%\res_versions_persist" "%TARGET_DIR%\res_versions_persist"
 )
 

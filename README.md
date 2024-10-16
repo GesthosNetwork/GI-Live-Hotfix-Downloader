@@ -8,7 +8,7 @@
 
 ### How to Use
 1. **Configure Environment Variables**: 
-   - Change `MAIN_URL`, `VERSION`, and `CLIENT_PATH` in the `.env` file to valid values.
+   - Change `Main URL`, `Version Game`, and `Clients Game` in the `.env` file to valid values.
    
 2. **Install Modul**:
    - Open a terminal and run:
@@ -22,6 +22,7 @@
 
 ## Available Main URLs
 - https://autopatchhk.yuanshen.com
+- https://ps.yuuki.me/data_game/genshin (for version 3.2_live only)
 - https://mirror.autopatch-reversedrooms.workers.dev/anime-cn (for version 3.4_live only)
 
 ## Available Clients
