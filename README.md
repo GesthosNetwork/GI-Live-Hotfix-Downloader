@@ -8,7 +8,7 @@
 
 ### How to Use
 1. **Configure Environment Variables**: 
-   - Change `Main URL`, `Version Game`, and `Clients Game` in the `.env` file to valid values.
+   - Change `Main Url (URL)`, `Version Game (BRANCH)`, and `Clients Game (CLIENT)` in the `.env` file to valid values.
    
 2. **Install Modul**:
    - Open a terminal and run:

@@ -18,7 +18,7 @@ for /f "tokens=1,2 delims= " %%A in (version.release\%BRANCH%.txt) do (
 
 set TARGET_DIR=.\resources\OSRELWin%BRANCH_VERSION%_R%res_CODE%_S%silence_CODE%_D%data_CODE%\GenshinImpact_Data\Persistent
 if not exist "%TARGET_DIR%" (
-    mkdir "%TARGET_DIR%"
+    md "%TARGET_DIR%"
 )
 
 set path1=.\resources\client_game_res\%BRANCH%\output_%res_CODE%_%res_SUFFIX%\client\%CLIENT%
@@ -74,7 +74,7 @@ echo %data_CODE% > "%TARGET_DIR%\data_revision"
 for %%F in ("%TARGET_DIR%\AssetBundles\svc_catalog" resources\client_design_data resources\client_game_res) do (
     if exist "%%F" (
         del /q "%%F" 2>nul
-        rmdir /s /q "%%F" 2>nul
+        rd /s /q "%%F" 2>nul
     )
 )
 
