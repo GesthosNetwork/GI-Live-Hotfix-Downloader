@@ -1,4 +1,3 @@
-#!/usr/bin/python3
 import sys
 import os
 import json
@@ -31,7 +30,7 @@ RES_UNLISTED_FILES = [
   "script_version"
 ]
 RES_LEGACY_FILES = [
-  "VideoAssets/video_versions", # consolidated into res_versions
+  "VideoAssets/video_versions",
   "AudioAssets/audio_versions"
 ]
 RES_AUDIO_DIFF_FILE = "audio_diff_versions"
@@ -83,19 +82,19 @@ def fetch_file(rel_path, base_url, dst_dir):
     logger().error(f"Failed to fetch {rel_path}; status_code={response.status_code}")
     return
 
-  os.makedirs(os.path.dirname(f"{dst_dir}/{rel_path}"), exist_ok=True) # need to create directory
+  os.makedirs(os.path.dirname(f"{dst_dir}/{rel_path}"), exist_ok=True)
 
   try:
-    signal.signal(signal.SIGINT, signal.default_int_handler) # reset handler so we can catch exception
+    signal.signal(signal.SIGINT, signal.default_int_handler)
     with open(f"{dst_dir}/{rel_path}", "wb") as file:
-      copyfileobj(response.raw, file, length=16*1024*1024) # write in 16M chunks
+      copyfileobj(response.raw, file, length=16*1024*1024)
   except KeyboardInterrupt:
     logger().warning("Catched KeyboardInterrupt during download process; cleaning up partial files...")
     os.remove(f"{dst_dir}/{rel_path}")
     logger().info("Exiting cleanly")
     sys.exit(130)
 
-  signal.signal(signal.SIGINT, sigint_handler) # restore custom handler
+  signal.signal(signal.SIGINT, sigint_handler)
 
 def parse_res_versions(name, rel_path, base_url, dst_dir, is_base, is_audio):
   logger().info(f"Parsing {name} with {{{rel_path=}, {is_base=}}}")
@@ -127,9 +126,9 @@ def parse_res_versions(name, rel_path, base_url, dst_dir, is_base, is_audio):
     remote_dir = DIR_MAPPINGS.get(os.path.splitext(remote_name)[1]) or NAME_MAPPINGS.get(remote_name) or ""
 
     if is_base == False and is_patch != True:
-      continue # revision is not base and file is not marked as updated
+      continue
     if not is_audio and remote_dir in ["AudioAssets", "VideoAssets"]:
-      continue # ignore audio/video for this pass
+      continue
 
     fetch_file(urljoin(rel_path, remote_dir, remote_name), base_url, dst_dir)
 
