@@ -3,22 +3,19 @@
 **GI Live Hotfix Downloader** is a tool for managing and verifying Live Hotfix data patches downloaded when you log in to the game. Typically, these patches are located in the `GenshinImpact_Data/Persistent` folder. Some data will delete in the next update. So, If we don't backup live updates (suffixes and versions from query region info), we will loose cool data forever.
 
 
-### Requirements
-- Install [python](https://www.python.org/downloads/)
+## Compile Instructions
+
+1. Install [.NET 9.0 SDK](https://dotnet.microsoft.com/download/dotnet/9.0)  
+2. Run `compile.bat`  
+3. Output will be in `bin` folder.
 
 ### How to Use
-1. **Configure Environment Variables**: 
-   - Change `Main Url (URL)`, `Version Game (BRANCH)`, and `Clients Game (CLIENT)` in the `.env` file to valid values.
+1. **Configure config.json**: 
+   - Edit `Version Game (branch)`, `Clients Game (client)`, and`Main Url (url)`.
    
-2. **Install Modul**:
-   - Open a terminal and run:
-     ```
-     pip install requests
-     ```
-
-3. **Start the Download**:
-   - Click `download.bat` to begin the download process.
-   - Click `release.bat` to generate GenshinImpact_Data/Persistent.
+2. **Start the Download**:
+   - Click `fetchrel.exe` to begin the download process.
+   - Click `release.exe` to generate GenshinImpact_Data/Persistent.
 
 ## Available Main URLs
 - https://autopatchhk.yuanshen.com

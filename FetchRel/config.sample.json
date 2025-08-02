@@ -1,0 +1,258 @@
+{
+  "config": {
+    "branch": "1.0_live",
+    "client": "StandaloneWindows64",
+    "url": "https://autopatchhk.yuanshen.com",
+    "outDir": "./Downloads",
+    "verbose": true,
+    "defaultBase": false
+  },
+  "system": {
+    "resFiles": {
+      "res_versions_external": true,
+      "res_versions_medium": false,
+      "res_versions_streaming": false,
+      "release_res_versions_external": true,
+      "release_res_versions_medium": false,
+      "release_res_versions_streaming": false
+    },
+    "resUnlistedFiles": {
+      "base_revision": true,
+      "script_version": false
+    },
+    "resLegacyFiles": {
+      "AudioAssets/audio_versions": true,
+      "VideoAssets/video_versions": true
+    },
+    "dirMappings": {
+      "AssetBundles": [".blk"],
+      "AudioAssets": [".pck"],
+      "VideoAssets": [".cuepoint",".srt",".usm"]
+    },
+    "nameMappings": {
+      "AssetBundles": ["svc_catalog"]
+    },
+    "silenceFiles": {
+      "AssetBundles/data_versions": true
+    },
+    "dataFiles": {
+      "AssetBundles/data_versions": true,
+      "AssetBundles/data_versions_medium": false
+    }
+  },
+  "1.0_live": {
+    "res": "1284249_ba7ad33643",
+    "silence": "1393824_2599c61c7b",
+    "data": "1358691_cdc3f383ef"
+  },
+  "1.1_live": {
+    "res": "",
+    "silence": "",
+    "data": ""
+  },
+  "1.2_live": {
+    "res": "1771533_84f00c80ae",
+    "silence": "1847412_b792271859",
+    "data": "1816310_cf16f91abf"
+  },
+  "1.3_live": {
+    "res": "2079798_299eb183c6",
+    "silence": "2088824_487227b3c0",
+    "data": "2189670_415e19bf37"
+  },
+  "1.4_live": {
+    "res": "2556796_7800503cfb",
+    "silence": "2563827_8a626d486c",
+    "data": "2563827_8a626d486c"
+  },
+  "1.5_live": {
+    "res": "2866676_eaf0bb745e",
+    "silence": "3180402_26cb04dcb5",
+    "data": "2957756_fc8c9f0ed1"
+  },
+  "1.6_live": {
+    "res": "3557509_5979a935f8",
+    "silence": "3266913_b1501b6955",
+    "data": "3526661_2b3db51945"
+  },
+  "2.0_live": {
+    "res": "4049592_1b5db117fe",
+    "silence": "3788800_47abc13ddb",
+    "data": "3832552_4ee4e2079f"
+  },
+  "2.1_live": {
+    "res": "",
+    "silence": "",
+    "data": ""
+  },
+  "2.2_live": {
+    "res": "4705718_1a1da51473",
+    "silence": "4858667_ddae69069e",
+    "data": "4715326_9bc8c73a4b"
+  },
+  "2.3_live": {
+    "res": "5134813_4ada34ec9f",
+    "silence": "5082883_023295ee18",
+    "data": "5278928_9487c22876"
+  },
+  "2.4_live": {
+    "res": "5691054_b6bda5cd2b",
+    "silence": "5692577_effa23b6c4",
+    "data": "5692577_effa23b6c4"
+  },
+  "2.5_live": {
+    "res": "6089080_7d735e9e35",
+    "silence": "6140667_b07232a8dc",
+    "data": "5999657_297cf077de"
+  },
+  "2.6_live": {
+    "res": "6708157_7a34a36a6e",
+    "silence": "7320343_b09884cf27",
+    "data": "6731353_adfeb8be71"
+  },
+  "2.7_live": {
+    "res": "8029328_4cecb3db74",
+    "silence": "8227893_b9d91614c6",
+    "data": "8227893_b9d91614c6"
+  },
+  "2.8_live": {
+    "res": "8589120_fc51cefe86",
+    "silence": "8812249_af39852a33",
+    "data": "8644052_1ce48fca2c"
+  },
+  "3.0_live": {
+    "res": "10283122_ec58ff372e",
+    "silence": "10446836_320895326e",
+    "data": "10316937_4fcac11e23"
+  },
+  "3.1_live": {
+    "res": "10916590_847ba6bd45",
+    "silence": "10805493_3222597d09",
+    "data": "10941477_af48dac880"
+  },
+  "3.2_live": {
+    "res": "11611027_8bf0cf5f3d",
+    "silence": "11212885_766b0a2560",
+    "data": "11793813_1bb7eba264"
+  },
+  "3.3_live": {
+    "res": "12335344_2474549507",
+    "silence": "12451827_2d419b12a6",
+    "data": "12361027_f6d6187d41"
+  },
+  "3.4_live": {
+    "res": "12875869_b9da23cec2",
+    "silence": "12901190_326dbbbf65",
+    "data": "13021296_8f79734b55"
+  },
+  "3.5_live": {
+    "res": "13558307_7b595ee970",
+    "silence": "13586568_39015ed256",
+    "data": "13948595_cf2075f90d"
+  },
+  "3.6_live": {
+    "res": "14478736_c536bf66dc",
+    "silence": "14299294_f267b82a5c",
+    "data": "14299294_f267b82a5c"
+  },
+  "3.7_live": {
+    "res": "15495264_48d6973796",
+    "silence": "15338072_0f8841d56e",
+    "data": "15203785_1263c8592c"
+  },
+  "3.8_live": {
+    "res": "16698153_e0a86dd64a",
+    "silence": "16388687_0e542ee4cf",
+    "data": "16994144_6ff11ea93e"
+  },
+  "4.0_live": {
+    "res": "17742988_0f2b2dcb73",
+    "silence": "18300859_bf87fa1463",
+    "data": "18300859_bf87fa1463"
+  },
+  "4.1_live": {
+    "res": "18848091_56f784625a",
+    "silence": "19161251_e15babb708",
+    "data": "18669876_e9d03fbe88"
+  },
+  "4.2_live": {
+    "res": "19421453_f9ad0473d7",
+    "silence": "19245959_7d55598c1e",
+    "data": "19561600_7c18a6e8da"
+  },
+  "4.3_live": {
+    "res": "20211313_10299a5695",
+    "silence": "20118391_e44ee802fc",
+    "data": "20421822_019974b7c5"
+  },
+  "4.4_live": {
+    "res": "21147109_98b78e1b0a",
+    "silence": "20917735_34c4b7c3e4",
+    "data": "21129932_dd6a0ee8bb"
+  },
+  "4.5_live": {
+    "res": "21575220_2de9844a54",
+    "silence": "21858521_d339155f05",
+    "data": "21892652_ca6bd22274"
+  },
+  "4.6_live": {
+    "res": "22943756_30aa0850f9",
+    "silence": "23185664_83ab7ef56e",
+    "data": "23160011_2a6959f898"
+  },
+  "4.7_live": {
+    "res": "24292157_35b707301e",
+    "silence": "24332145_492068e4a6",
+    "data": "24803766_5e5f470e3e"
+  },
+  "4.8_live": {
+    "res": "25683502_e97e19ed63",
+    "silence": "25353456_5cf8b1c426",
+    "data": "25722854_8853cb1f62"
+  },
+  "5.0_live": {
+    "res": "26885261_05bfe00485",
+    "silence": "27370672_da441c29cf",
+    "data": "27173400_b79a0d313d"
+  },
+  "5.1_live": {
+    "res": "27918307_89673d1bc4",
+    "silence": "27760956_1a3d165f06",
+    "data": "28057350_8440285e7d"
+  },
+  "5.2_live": {
+    "res": "29063028_d744230f4d",
+    "silence": "28772242_d77af77c16",
+    "data": "28887986_e9e9d833e1"
+  },
+  "5.3_live": {
+    "res": "30064194_3e5c6aef48",
+    "silence": "30268382_0ec19ee5e5",
+    "data": "30106004_8a4a5364c3"
+  },
+  "5.4_live": {
+    "res": "31018448_dded812785",
+    "silence": "30738672_d081d2e70f",
+    "data": "31438229_13ee5d08a0"
+  },
+  "5.5_live": {
+    "res": "32121672_3a0d119462",
+    "silence": "32008736_f60a685d9f",
+    "data": "32358450_b938447bcb"
+  },
+  "5.6_live": {
+    "res": "33273106_cbcec8716f",
+    "silence": "33734816_052b2b2e48",
+    "data": "34006403_af396acece"
+  },
+  "5.7_live": {
+    "res": "34723880_60f0cb44f9",
+    "silence": "34772609_8171d9d12f",
+    "data": "34522700_3eba9cfd17"
+  },
+  "5.8_live": {
+    "res": "35436798_d7f2d96d6a",
+    "silence": "35665788_a2868b04e0",
+    "data": "35969341_6382c462a5"
+  }
+}

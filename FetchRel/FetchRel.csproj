@@ -1,0 +1,73 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <AssemblyName>fetchrel</AssemblyName>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <PlatformTarget>x64</PlatformTarget>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <Version>1.0</Version>
+	<Copyright>GesthosNetwork © 2025 All rights reserved.</Copyright>
+    <PublishSingleFile>true</PublishSingleFile>
+    <SelfContained>true</SelfContained>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <PublishDir>..\bin\</PublishDir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Text.Json" Version="9.0.7" />
+  </ItemGroup>
+
+  <Target Name="PublishRelease" BeforeTargets="Publish">
+    <Exec Command="dotnet publish ..\Tools\Release.csproj --configuration Release --runtime win-x64 --self-contained true /p:PublishSingleFile=true /p:IncludeNativeLibrariesForSelfExtract=true" />
+    
+    <ItemGroup>
+      <ToolsExe Include="..\Tools\bin\Release\net9.0\win-x64\publish\release.exe" />
+    </ItemGroup>
+
+    <Copy
+      SourceFiles="@(ToolsExe)"
+      DestinationFolder="..\bin\"
+      SkipUnchangedFiles="true"
+      OverwriteReadOnlyFiles="true" />
+  </Target>
+
+  <Target Name="PostPublishCleanup" AfterTargets="Publish">
+    
+    <ItemGroup>
+      <JunkFiles Include="
+        $(ProjectDir)bin\*.pdb;
+        $(PublishDir)*.pdb;
+        $(PublishDir)*.json" />
+      <JunkFiles Remove="$(ProjectDir)bin\config.json" />
+      <JunkFiles Remove="$(PublishDir)config.json" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PublishedFiles Include="$(PublishDir)*.exe" />
+    </ItemGroup>
+
+    <Copy
+      SourceFiles="@(PublishedFiles)"
+      DestinationFolder="$(ProjectDir)bin\"
+      SkipUnchangedFiles="true"
+      OverwriteReadOnlyFiles="true" />
+
+    <Delete Files="@(JunkFiles)" />
+
+    <RemoveDir Directories="
+      $(ProjectDir)bin;
+      $(ProjectDir)obj;
+      $(ProjectDir)..\Tools\bin;
+      $(ProjectDir)..\Tools\obj;" />
+
+    <Copy
+      SourceFiles="config.sample.json"
+      DestinationFiles="..\bin\config.json"
+      OverwriteReadOnlyFiles="true" />
+  </Target>
+
+</Project>
