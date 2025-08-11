@@ -60,7 +60,7 @@ public static class ConfigLoader
 
                 string resolvedUrl = branch switch
                 {
-                    "3.2_live" => "https://ps.yuuki.me/data_game/genshin",
+                    "3.2_live" => "https://archive.org/download/genshin-autopatch-3.2",
                     "3.4_live" => "https://mirror.autopatch-reversedrooms.workers.dev/anime-cn",
                     _ => DEFAULT_URL
                 };

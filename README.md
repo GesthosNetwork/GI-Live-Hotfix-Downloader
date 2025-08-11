@@ -19,7 +19,7 @@
 
 ## Available Main URLs
 - https://autopatchhk.yuanshen.com
-- https://ps.yuuki.me/data_game/genshin (for version 3.2_live only)
+- https://archive.org/download/genshin-autopatch-3.2 (for version 3.2_live only)
 - https://mirror.autopatch-reversedrooms.workers.dev/anime-cn (for version 3.4_live only)
 
 ## Available Clients
