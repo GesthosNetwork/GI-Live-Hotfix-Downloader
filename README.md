@@ -28,3 +28,32 @@
 - iOS
 - PS4
 - PS5 (Not available before 1.5_live)
+
+## Additional Note
+- Only for 3.2_live iOS, use `res 11611739_50a8ffbbbd`
+- We are currently missing silence and data for 1.1_live and 2.1_live
+- You can choose either of the two config.json formats
+```json
+   
+   format 1
+   "1.0_live": {
+       "res": "1284249_ba7ad33643",
+       "silence": "1393824_2599c61c7b",
+       "data": "1358691_cdc3f383ef"
+     }
+
+   format 2
+   "1.0_live": {
+    "res": {
+      "revision": "1284249_ba7ad33643",
+      "audio": "en", 
+      "base": true
+    },
+    "silence": {
+      "revision": "1393824_2599c61c7b"
+    },
+    "data": {
+      "revision": "1358691_cdc3f383ef"
+    }
+  }
+```

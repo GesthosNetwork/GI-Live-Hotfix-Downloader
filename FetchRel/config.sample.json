@@ -18,15 +18,20 @@
     },
     "resUnlistedFiles": {
       "base_revision": true,
-      "script_version": false
+      "script_version": true,
+      "release_total_size": false,
+      "total_size": false,
+      "EngineRevision.txt": false
     },
     "resLegacyFiles": {
       "AudioAssets/audio_versions": true,
+      "MediumAudioAssets/audio_versions": false,
       "VideoAssets/video_versions": true
     },
     "dirMappings": {
       "AssetBundles": [".blk"],
       "AudioAssets": [".pck"],
+      "MediumAudioAssets": [".pck"],
       "VideoAssets": [".cuepoint",".srt",".usm"]
     },
     "nameMappings": {
@@ -46,7 +51,7 @@
     "data": "1358691_cdc3f383ef"
   },
   "1.1_live": {
-    "res": "",
+    "res": "1460913_250f778220",
     "silence": "",
     "data": ""
   },
@@ -81,7 +86,7 @@
     "data": "3832552_4ee4e2079f"
   },
   "2.1_live": {
-    "res": "",
+    "res": "4335494_39225b48c2",
     "silence": "",
     "data": ""
   },
@@ -251,8 +256,13 @@
     "data": "34522700_3eba9cfd17"
   },
   "5.8_live": {
-    "res": "36134629_57e957f456",
+    "res": "36351440_231fb1f04d",
     "silence": "35665788_a2868b04e0",
-    "data": "36257534_fb5ec98736"
+    "data": "36660778_b85c3b0676"
+  },
+  "6.0_live": {
+    "res": "37301476_1f8ad5248d",
+    "silence": "37251250_7effb59286",
+    "data": "37373902_74f0947609"
   }
 }
