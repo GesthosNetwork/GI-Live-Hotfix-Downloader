@@ -10,22 +10,23 @@
   "system": {
     "resFiles": {
       "res_versions_external": true,
-      "res_versions_medium": false,
-      "res_versions_streaming": false,
+      "res_versions_medium": true,
+      "res_versions_streaming": true,
       "release_res_versions_external": true,
-      "release_res_versions_medium": false,
-      "release_res_versions_streaming": false
+      "release_res_versions_medium": true,
+      "release_res_versions_streaming": true
     },
     "resUnlistedFiles": {
       "base_revision": true,
       "script_version": true,
-      "release_total_size": false,
-      "total_size": false,
-      "EngineRevision.txt": false
+      "release_total_size": true,
+      "total_size": true,
+      "EngineRevision.txt": true,
+	  "patch_node_versions": true
     },
     "resLegacyFiles": {
       "AudioAssets/audio_versions": true,
-      "MediumAudioAssets/audio_versions": false,
+      "MediumAudioAssets/audio_versions": true,
       "VideoAssets/video_versions": true
     },
     "dirMappings": {
@@ -42,7 +43,7 @@
     },
     "dataFiles": {
       "AssetBundles/data_versions": true,
-      "AssetBundles/data_versions_medium": false
+      "AssetBundles/data_versions_medium": true
     }
   },
   "1.0_live": {
@@ -276,8 +277,18 @@
     "data": "40944286_f7ee947584"
   },
   "6.3_live": {
-    "res": "41701329_0d64a78f99",
-    "silence": "41708913_6b153e66c8",
-    "data": "41749723_b15414dbda"
+    "res": "41839214_a9d0912cc6",
+    "silence": "42478099_c1e6c5d3f1",
+    "data": "42478099_c1e6c5d3f1"
+  },
+  "6.4_live": {
+    "res": "43054873_f637e7a726",
+    "silence": "42893508_8045768f33",
+    "data": "43272442_6229b8a308"
+  },
+  "6.5_live": {
+    "res": "44346260_18a5cfa09c",
+    "silence": "44270935_957cdb21f1",
+    "data": "43994318_6794f685f4"
   }
 }

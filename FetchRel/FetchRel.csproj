@@ -3,10 +3,10 @@
   <PropertyGroup>
     <AssemblyName>fetchrel</AssemblyName>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net9.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <PlatformTarget>x64</PlatformTarget>
     <RuntimeIdentifier>win-x64</RuntimeIdentifier>
-    <Version>1.0.3</Version>
+    <Version>1.0.4</Version>
 	<Copyright>GesthosNetwork © 2026 All rights reserved.</Copyright>
     <PublishSingleFile>true</PublishSingleFile>
     <SelfContained>true</SelfContained>
@@ -17,15 +17,11 @@
     <PublishDir>..\bin\</PublishDir>
   </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="System.Text.Json" Version="9.0.9" />
-  </ItemGroup>
-
   <Target Name="PublishRelease" BeforeTargets="Publish">
     <Exec Command="dotnet publish ..\Tools\Release.csproj --configuration Release --runtime win-x64 --self-contained true /p:PublishSingleFile=true /p:IncludeNativeLibrariesForSelfExtract=true" />
     
     <ItemGroup>
-      <ToolsExe Include="..\Tools\bin\Release\net9.0\win-x64\publish\release.exe" />
+      <ToolsExe Include="..\Tools\bin\Release\net10.0\win-x64\publish\release.exe" />
     </ItemGroup>
 
     <Copy

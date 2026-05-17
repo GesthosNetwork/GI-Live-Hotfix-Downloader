@@ -5,7 +5,7 @@
 
 ## Compile Instructions
 
-1. Install [.NET 9.0 SDK](https://dotnet.microsoft.com/download/dotnet/9.0)  
+1. Install [.NET 10.0 SDK](https://dotnet.microsoft.com/download/dotnet/10.0)  
 2. Run `compile.bat`  
 3. Output will be in `bin` folder.
 
